@@ -16,6 +16,6 @@ const schema = new mongoose.Schema({
 })
 
 // create model from the schema.
-const envModel = mongoose.model('data', schema);
+const envModel = mongoose.model('data', schema, 'data');
 
 module.exports = { envModel };

@@ -4,9 +4,9 @@ const { envModel } = require('../models/data');
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
-  const hours = req.body.hours;
+  const numOfPoints = req.body.numOfPoints;
 
-  var query = envModel.find({}, null, { sort: '-timestamp' }).limit(hours);
+  var query = envModel.find({}, null, { sort: '-timestamp' }).limit(numOfPoints);
   query.exec((err, docs) => {
     if (err) {
       res.send(err);
